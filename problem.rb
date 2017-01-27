@@ -1,22 +1,25 @@
 # PROBLEM
-# Yousry is thirsty and wants to drink a club mate.
+# Make yousry drink club mate
 # Bottle - closed?
-# Yousry - open, drink_from_bottle, thirsty?, learn
+# Yousry - thirsty?, drink_once_from_bottle, open, learn
+# world - my_friend_yousry club_mate_bottle
 require_relative 'world'
 
+#make_it_summer
+#make_it_hell
 make_it_crazy
 
-bottle = world.club_mate_bottle
 yousry = world.my_friend_yousry
+bottle = world.club_mate_bottle
 
-yousry.learn :drink do
+yousry.learn :drink_to_satisfaction do
   if bottle.closed?
     yousry.open(bottle)
   end
 
   while yousry.thirsty?
-    yousry.drink_from_bottle(bottle)
+    yousry.drink_once_from_bottle(bottle)
   end
 end
 
-yousry.drink
+yousry.drink_to_satisfaction

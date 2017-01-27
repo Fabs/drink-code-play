@@ -14,7 +14,7 @@ class Yousry
     !is_done
   end
 
-  def drink_from_bottle(bottle)
+  def drink_once_from_bottle(bottle)
     @drinks += 1
     raise 'cannot drink from a closed bottle' if bottle.closed?
     puts "Yousry drinks nice Clube Mate #{@drinks} time(s)"
